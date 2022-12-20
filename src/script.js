@@ -1,3 +1,4 @@
+
 let url = "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json"
 let req = new XMLHttpRequest()
 
@@ -82,7 +83,7 @@ let drawBars = () => {
             return (height - padding) - heightScale(item[1])
         })
         .style('fill', 'rgb(245, 113, 52)')
-        .on('mouseover', (item) => {
+        .on('mouseover', (event, item) => {
             tooltip.transition()
                     .style('visibility', 'visible')
 
@@ -90,7 +91,7 @@ let drawBars = () => {
 
             document.querySelector('#tooltip').setAttribute('data-date', item[0])
         })
-        .on('mouseout', (item) => {
+        .on('mouseout', (event,item) => {
             tooltip.transition()
                     .style('visibility', 'hidden')
         })
