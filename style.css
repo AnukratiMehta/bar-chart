@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #708090;
+    
+}
+
+svg {
+    background-color: white;
+}
+
+.bar:hover {
+    fill: black;
+}
